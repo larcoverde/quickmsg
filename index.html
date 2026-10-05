@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QuickMSG</title>
+        <style>
+        body {
+            margin: 0;
+            display: flex;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>QuickMSG</h1>
+            <button id="createAccount">Create account</button>
+            <button id="logIn">Log in</button>
+        </div>
+        <script>
+        const createAccountBtn = document.getElementById("createAccount");
+        const logInBtn = document.getElementById("logIn");
+
+        let username;
+        let password;
+
+        createAccountBtn.addEventListener("click", () => {
+          username = prompt("Username");
+          password = prompt("Password");
+        })
+
+        logInBtn.addEventListener("click", () => {
+          username = prompt("Username");
+          password = prompt("Password");
+
+          //test only
+          if (username === "user" && password === "user") {
+            window.location.href = "chat.html";
+          }
+        })
+        </script>
+    </body>
+</html>
